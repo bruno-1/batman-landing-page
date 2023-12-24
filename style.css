@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #fdff00;
+  --primary-dark: #000;
+  --dark-40: #b2b2b2;
+  --dark-50: #929292;
+  --dark-80: #383838;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--primary-dark);
+  background-image: url("./assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 0 6.25rem;
+}
+
+.header {
+  margin-top: 1.375rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  gap: 3.5rem;
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  align-items: center;
+}
+
+.item__link:link,
+.item__link:visited,
+.item__link:hover,
+.item__link:active {
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn-watch {
+  background-color: var(--primary-color);
+  color: var(--primary-dark);
+  border: none;
+  border-radius: 8px;
+}
+
+.item__btn {
+  padding: .375rem 2.125rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.main {
+  margin-top: 6.125rem;
+}
+
+.main__title, .main__subtitle {
+  margin: 0;
+  font-weight: 700;
+  color: #fff;
+}
+
+.main__title {
+  font-size: 4.5rem;
+}
+
+.main__subtitle {
+  font-size: 1.75rem;
+  margin: 1rem 0 2.25rem;
+}
+
+.main__categories {
+  display: flex;
+  max-width: 11.625rem;
+  justify-content: space-between;
+  color: var(--dark-40);
+  letter-spacing: .125rem;
+  font-weight: 700;
+  font-size: .875rem;
+}
+
+.category__categories {
+  display: block;
+}
+
+.main__about {
+  color: #fff;
+  max-width: 37.75rem;
+  line-height: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2.375rem;
+  margin-bottom: 3rem;
+}
+
+.about__principal, .about__secondary {
+  margin: 0;
+}
+
+.about__principal {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.about__secondary {
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.secondary__link:link,
+.secondary__link:visited,
+.secondary__link:hover,
+.secondary__link:active {
+  color: #fff;
+  font-weight: 700;
+}
+
+.main__btn {
+  font-size: 1.5rem;
+  padding: .75rem 4.25rem;
+  font-weight: 600;
+}
+
+.main__movies {
+  margin-top: 3.4375rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .625rem;
+}
+
+.movies__movie-card {
+  border: 1px solid var(--dark-80);
+  display: flex;
+  border-radius: 8px;
+  background-color: var(--primary-dark);
+}
+
+.cover__movie-card {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.movie-card__content-movie {
+  padding: 1rem;
+  max-width: 15.75rem;
+}
+
+.content-movie__categories {
+  letter-spacing: .125rem;
+  text-transform: uppercase;
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--dark-50);
+}
+
+.content-movie__title {
+  margin: .375rem 0;
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.content-movie__imdb {
+  font-weight: 400;
+  font-size: .875rem;
+  color: #fff;
+}
+
+.imdb__score {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.content-movie__description {
+  font-weight: 400;
+  font-size: .75rem;
+  color: var(--dark-50);
+  line-height: 1rem;
+  margin: .375rem 0 .75rem;
+}
+
+.content-movie__btns-movie {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btns-movie__btn-watch {
+  font-weight: 700;
+  font-size: .75rem;
+  padding: .3125rem 2rem;
+}
+
+.btns-movie__btn-details {
+  border: 1px solid var(--dark-40);
+  background-color: transparent;
+  color: var(--dark-40);
+  padding: .3125rem 1.875rem;
+  border-radius: 8px;
+}
+
+.footer {
+  display: flex;
+  padding: 2.25rem 0;
+  justify-content: space-between;
+}
+
+.footer__credits {
+  display: flex;
+  gap: .75rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.credits__about {
+  display: block;
+  font-size: .625rem;
+  color: var(--dark-50);
+  font-weight: 400;
+}
+
+.footer__social {
+  display: flex;
+  gap: 2rem;
+}

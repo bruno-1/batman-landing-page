@@ -1,0 +1,21 @@
+[
+  {
+    "title": "Batman Begins",
+    "categories": ["Action", "Adventure"],
+    "imdb": 8.2,
+    "description": "Batman Begins explores the origins of the Batman legend and the Dark Knight's emergence as a force...",
+    "cover": "./assets/batman-begins.jpg"
+  }, {
+    "title": "The Dark Knight",
+    "categories": ["Action", "Crime", "Drama"],
+    "imdb": 9.0,
+    "description": "Christian Bale and director Christopher Nolan reunite following their blockbuster success with...",
+    "cover": "./assets/the-dark-knight.jpg"
+  }, {
+    "title": "The Dark Knight Rise",
+    "categories": ["Action", "Adventure"],
+    "imdb": 8.4,
+    "description": "Directing one of the most anticipated films of the year, Christopher Nolan returns to Gotham to complete his...",
+    "cover": "./assets/the-dark-knight-rises.jpg"
+  }
+]
