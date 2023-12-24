@@ -53,6 +53,7 @@ body {
   color: var(--primary-dark);
   border: none;
   border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .item__btn {
@@ -209,6 +210,7 @@ body {
   color: var(--dark-40);
   padding: .3125rem 1.875rem;
   border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 .footer {
