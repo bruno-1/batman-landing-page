@@ -20,7 +20,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  padding: 0 6.25rem;
+  padding: 0 6.94447vw;
 }
 
 .header {
@@ -263,6 +263,7 @@ body {
   display: flex;
   padding: 2.25rem 0;
   justify-content: space-between;
+  align-items: center;
 }
 
 .footer__credits {
