@@ -7,6 +7,7 @@ movies.forEach(movie => {
     .attr("width", "140")
     .attr("height", "200")
     .attr("src", movie.cover)
+    .attr("alt", `Cover ${movie.title}`)
     .addClass("cover__movie-card");
 
   movieCard.append(cover);
