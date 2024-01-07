@@ -1,65 +1,53 @@
-const movies = await fetch("./movies.json").then(response => response.json());
-const moviesEl = document.getElementById("movies");
+const movies = await fetch("./movies.json")
+                .then(response => response.json());
 
 movies.forEach(movie => {
-  const movieCard = document.createElement("div");
-  movieCard.className = "movies__movie-card";
+  const movieCard = $("<div></div>").addClass("movies__movie-card");
+  const cover = $("<img />")
+    .attr("width", "140")
+    .attr("height", "200")
+    .attr("src", movie.cover)
+    .addClass("cover__movie-card");
 
-  const cover = document.createElement("img");
-  cover.width = 140;
-  cover.height = 200;
-  cover.src = movie.cover;
-  cover.className = "cover__movie-card";
+  movieCard.append(cover);
 
-  movieCard.appendChild(cover);
+  const content = $("<div></div>").addClass("movie-card__content-movie");
 
-  const content = document.createElement("div");
-  content.className = "movie-card__content-movie";
+  const categories = $("<div></div>")
+    .text(movie.categories.join(", "))
+    .addClass("content-movie__categories");
+  const title = $("<h3></h3>")
+    .text(movie.title)
+    .addClass("content-movie__title");
 
-  const categories = document.createElement("div");
-  categories.innerText = movie.categories.join(", ");
-  categories.className = "content-movie__categories";
-  content.appendChild(categories);
+  const imdb = $("<div></div>")
+    .text("IMDB: ").addClass("content-movie__imdb");
+  const score = $("<span></span>")
+    .text(Number(movie.imdb).toPrecision(2))
+    .addClass("imdb__score");
+  imdb.append(score);
 
-  const title = document.createElement("h3");
-  title.className = "content-movie__title";
-  title.innerText = movie.title;
-  content.appendChild(title);
+  const description = $("<p></p>")
+    .text(movie.description)
+    .addClass("content-movie__description");
 
-  const imdb = document.createElement("div");
-  imdb.className = "content-movie__imdb";
-  imdb.innerText = "IMDB: ";
+  const btnWatch = $("<button></button>")
+    .attr("type", "button")
+    .attr("title", `Watch ${movie.title}`)
+    .text("Watch")
+    .addClass("btn-watch btns-movie__btn-watch");
+  const btnDetail = $("<button></button>")
+    .attr("type", "button")
+    .attr("title", `Details ${movie.title}`)
+    .text("Details")
+    .addClass("btns-movie__btn-details");
 
-  const score = document.createElement("span");
-  score.className = "imdb__score";
-  score.innerText = Number(movie.imdb).toPrecision(2);
-  imdb.appendChild(score);
-  content.appendChild(imdb);
+  const btns = $("<div></div>")
+    .addClass("content-movie__btns-movie")
+    .append(btnWatch, btnDetail);
 
-  const description = document.createElement("p");
-  description.className = "content-movie__description";
-  description.innerText = movie.description;
-  content.appendChild(description);
-
-  const btns = document.createElement("div");
-  btns.className = "content-movie__btns-movie";
-
-  const btnWatch = document.createElement("button");
-  btnWatch.type = "button";
-  btnWatch.title = "Watch " + movie.title;
-  btnWatch.classList.add("btn-watch", "btns-movie__btn-watch");
-  btnWatch.innerText = "Watch";
-  btns.appendChild(btnWatch);
-
-  const btnDetail = document.createElement("button");
-  btnDetail.type = "button";
-  btnDetail.title = "Details " + movie.title;
-  btnDetail.className = "btns-movie__btn-details";
-  btnDetail.innerText = "Details";
-  btns.appendChild(btnDetail);
-
-  content.appendChild(btns);
+  content.append(categories, title, imdb, description, btns);
 
   movieCard.append(content);
-  moviesEl.appendChild(movieCard);
-})
+  $("#movies").append(movieCard);
+});
