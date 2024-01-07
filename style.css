@@ -30,7 +30,7 @@ body {
   align-items: center;
 }
 
-.nav__list {
+.nav__menu {
   list-style-type: none;
   display: flex;
   gap: 3.5rem;
