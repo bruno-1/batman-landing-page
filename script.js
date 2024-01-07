@@ -1,3 +1,17 @@
+$("#btn-nav").on("click", () => {
+  if ($("#menu:visible").length) {
+    $("#btn-nav").css("transform", "rotate(0deg)");
+    $("#menu")
+      .hide("slow", () => {
+        $("#menu").removeClass("nav__menu-visible").addClass("nav__menu-hidden");;
+      });
+  } else {
+    $("#btn-nav").css("transform", "rotate(90deg)");
+    $("#menu").show("slow");
+    $("#menu").removeClass("nav__menu-hidden").addClass("nav__menu-visible");
+  }
+});
+
 const movies = await fetch("./movies.json")
                 .then(response => response.json());
 

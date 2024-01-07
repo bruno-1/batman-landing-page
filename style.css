@@ -28,6 +28,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .header__nav {
@@ -36,7 +37,7 @@ body {
   width: 69.759%;
 }
 
-.nav__btn-menu {
+.header__btn-nav {
   display: none;
 }
 
@@ -54,20 +55,34 @@ body {
 
 @media screen and (max-width: 75rem) {
   .header__nav {
-    width: auto;
+    width: 100%;
   }
 
-  .nav__btn-menu {
+  .header__btn-nav {
     background: none;
     border: none;
     color: #fff;
     font-size: 2.5rem;
     display: inline-block;
     padding: 0;
+    transition-duration: 600ms;
+    margin-left: auto;
   }
 
   .nav__menu {
     display: none;
+  }
+
+  .nav__menu-visible {
+    display: flex !important;
+    flex-direction: column;
+    gap: .625rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .nav__menu-hidden {
+    display: flex !important;
   }
 }
 
